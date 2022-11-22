@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:46:07 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/19 03:27:02 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/21 14:33:31 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	*ft_calloc(size_t nbr, size_t size)
 
 	if (nbr == 0 || size == 0)
 		ft_calloc(1, 1);
-	else if (nbr > SIZE_MAX / 10 || size > SIZE_MAX / 10)
-		return (NULL);
 	mem_sum = nbr * size;
+	if (mem_sum >= SIZE_MAX || nbr > SIZE_MAX / 10 || size > SIZE_MAX / 10)
+		return (NULL);
 	mem = malloc(mem_sum);
 	if (!mem)
 		return (NULL);

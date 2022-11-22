@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:08:45 by yuske             #+#    #+#             */
-/*   Updated: 2022/11/19 03:25:37 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/20 17:40:12 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@
 // 	return (nbr);
 // }
 
+//11L
 static int	long_checker(int flg, long nbr, char chr)
 {
 	long	lm_10th;

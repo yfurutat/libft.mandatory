@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:18:16 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/19 11:47:09 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/22 14:17:30 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,12 +101,41 @@
 // }
 
 //3. 11L
+// char	*ft_strnstr(const char *str_l, const char *str_s, size_t n)
+// {
+// 	if (!str_s || !str_l)
+// 		SIGSEGV ;
+// 	else if (*str_s == '\0' || n == 0)
+// 		return ((char *)str_l);
+// 	while (n-- > ft_strlen(str_s) - 1 && *str_l)
+// 	{
+// 		if (!(ft_strncmp(str_l, str_s, ft_strlen(str_s))))
+// 			return ((char *)str_l);
+// 		str_l++;
+// 	}
+// 	return (NULL);
+// }
+
+// char	*ft_strnstr(const char *str_l, const char *str_s, size_t n)
+// {
+// 	if (*str_s == '\0')
+// 		return ((char *)str_l);
+// 	else if (!str_s || (!str_l && n != 0))
+// 		SIGSEGV ;
+// 	while (n-- > ft_strlen(str_s) - 1 && *str_l)
+// 	{
+// 		if (!(ft_strncmp(str_l, str_s, ft_strlen(str_s))))
+// 			return ((char *)str_l);
+// 		str_l++;
+// 	}
+// 	return (NULL);
+// }
+
+//9L
 char	*ft_strnstr(const char *str_l, const char *str_s, size_t n)
 {
-	if (*str_s == '\0')
+	if (ft_strlen(str_s) == 0 || (!str_l && n == 0))
 		return ((char *)str_l);
-	else if (!str_s || (!str_l && n != 0))
-		return ((char *)SIGSEGV);
 	while (n-- > ft_strlen(str_s) - 1 && *str_l)
 	{
 		if (!(ft_strncmp(str_l, str_s, ft_strlen(str_s))))

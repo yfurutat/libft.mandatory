@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 07:35:53 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/17 00:57:47 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/19 22:49:40 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,28 @@
 // 	write(fd, s, len);
 // }
 
+// void	ft_putstr_fd(char *s, int fd)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	if (!s)
+// 		return ;
+// 	while (s[i])
+// 	{
+// 		ft_putchar_fd(s[i], fd);
+// 		i++;
+// 	}
+// }
+
+//7L
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
 	if (!s)
 		return ;
-	while (s[i])
+	while (*s)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		ft_putchar_fd(*s, fd);
+		s++;
 	}
 }

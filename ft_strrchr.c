@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:18:01 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/19 02:05:12 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/21 17:00:12 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@
 // 	char	head;
 
 // 	if (!str)
-// 		return ((char *)SIGSEGV);
+// 		SIGSEGV ;
 // 	head = *str;
 // 	while (*str)
 // 		str++;
@@ -105,7 +105,24 @@
 // 	return ((char *)str);
 // }
 
-//5. 13L
+//5. 12L
+// char	*ft_strrchr(const char *str, int ch)
+// {
+// 	const char	*head;
+
+// 	head = str;
+// 	while (*str)
+// 		str++;
+// 	while (*str != (const char)ch)
+// 	{
+// 		if (str == head)
+// 			return (NULL);
+// 		str--;
+// 	}
+// 	return ((char *)str);
+// }
+
+//6. 13L
 //*strが空の文字列->rear==0
 //→whileループをスルー
 // char	*ft_strrchr(const char *str, int ch)
@@ -125,25 +142,65 @@
 // 	return (NULL);
 // }
 
-//6. 12L
+//7. 12L
 //chが終端文字なら、whileループをスルー。
 //*strが空の文字列->rear==0
 //->while文の中に入るが、すぐにif文に当たる。->NULL
 //rear==0まで遡ってもchrが見つからない場合、
 //単にループを外れるとstr_caster[0]を返してしまう。
 //そのため、if文でnullを返す。
+// char	*ft_strrchr(const char *str, int ch)
+// {
+// 	char	*str_caster;
+// 	size_t	rear;
+
+// 	str_caster = (char *)str;
+// 	rear = ft_strlen(str);
+// 	while (str_caster[rear] != (char)ch && rear >= 0)
+// 	{
+// 		if (rear == 0)
+// 			return (NULL);
+// 		rear--;
+// 	}
+// 	return (&str_caster[rear]);
+// }
+
+//8. 12L
+// char	*ft_strrchr(const char *str, int ch)
+// {
+// 	char	*str_caster;
+// 	size_t	rear;
+
+// 	rear = ft_strlen(str);
+// 	while (str[rear] != (char)ch && rear >= 0)
+// 	{
+// 		if (rear == 0)
+// 			return (NULL);
+// 		rear--;
+// 	}
+// 	str_caster = (char *)&str[rear];
+// 	return (str_caster);
+// }
+
+//9. 10L
 char	*ft_strrchr(const char *str, int ch)
 {
-	char	*str_caster;
 	size_t	rear;
 
-	str_caster = (char *)str;
 	rear = ft_strlen(str);
-	while (str_caster[rear] != (char)ch && rear >= 0)
+	while (str[rear] != (char)ch && rear >= 0)
 	{
 		if (rear == 0)
 			return (NULL);
 		rear--;
 	}
-	return (&str_caster[rear]);
+	return ((char*)&str[rear]);
 }
+
+// //infinite loop
+// char	*ft_strrchr(const char *str, int ch)
+// {
+// 	while (*str)
+// 		ft_strchr(*&str, ch);
+// 	return ((char *)str);
+// }

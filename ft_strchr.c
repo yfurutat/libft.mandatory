@@ -44,3 +44,25 @@ char	*ft_strchr(const char *str, int ch)
 		return ((char *)str);
 	return (NULL);
 }
+
+//this doesn't work
+// char	*ft_strchr(const char *str, int ch)
+// {
+// 	while (*str)
+// 	{
+// 		if (*str == (char)ch || (char)ch == '\0')
+// 			return ((char *)str);
+// 		str++;
+// 	}
+// 	return (NULL);
+// }
+
+// //this doesn't work
+// char	*ft_strchr(const char *str, int ch)
+// {
+// 	if (!str)
+// 		return (NULL);
+// 	while (*str != '\0' && *str != (char)ch)
+// 		str++;
+// 	return ((char *)str);
+// }

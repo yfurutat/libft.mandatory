@@ -6,14 +6,14 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:36:34 by yuske             #+#    #+#             */
-/*   Updated: 2022/11/19 03:40:14 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/20 16:33:52 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //11L
-static char	**free_all(char **words, size_t i)
+static char	**free_f_all(char **words, size_t i)
 {
 	if (!words[i])
 	{
@@ -43,7 +43,7 @@ static char	*ft_strndup(const char *str, size_t n)
 }
 
 //23
-//line was too long
+//protype line was too long
 static char	**word_processor(char const *str, char chr, char **words, size_t n)
 {
 	char const	*start;
@@ -60,7 +60,7 @@ static char	**word_processor(char const *str, char chr, char **words, size_t n)
 				str++;
 			end = str;
 			words[i] = ft_strndup(start, end - start);
-			if (!free_all(words, i))
+			if (!free_f_all(words, i))
 				break ;
 			i++;
 		}

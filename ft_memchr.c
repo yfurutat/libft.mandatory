@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:18:55 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/18 15:53:54 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/20 00:45:57 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@
 // 	return (NULL);
 // }
 
-void	*ft_memchr(const void *str, int ch, size_t n)
+void	*ft_memchr(const void *mem, int ch, size_t n)
 {
 	unsigned char	*str_caster;
 	size_t			i;
 
-	str_caster = (unsigned char *)str;
+	str_caster = (unsigned char *)mem;
 	i = 0;
 	while (i++ < n)
 	{
