@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:18:01 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/21 17:00:12 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/22 14:40:52 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,7 +194,7 @@ char	*ft_strrchr(const char *str, int ch)
 			return (NULL);
 		rear--;
 	}
-	return ((char*)&str[rear]);
+	return ((char *)&str[rear]);
 }
 
 // //infinite loop
