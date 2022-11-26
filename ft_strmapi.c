@@ -6,12 +6,13 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 17:05:10 by yuske             #+#    #+#             */
-/*   Updated: 2022/11/20 01:29:20 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/23 11:21:33 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//16L
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;

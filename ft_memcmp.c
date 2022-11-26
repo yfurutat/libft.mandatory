@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:19:01 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/20 01:26:22 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/23 10:56:58 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 // 	return (s1b[i] - s2b[i]);
 // }
 
+//14L
 //s1, s2 == NULL -> ifに引っかからない. n == 0 -> whileに入らない
 int	ft_memcmp(const void *mem1, const void *mem2, size_t n)
 {

@@ -6,12 +6,13 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:35:39 by yuske             #+#    #+#             */
-/*   Updated: 2022/11/19 02:11:45 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/23 11:18:41 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//17L
 //2nd arg is unsigned int. why? compatible with size_t.
 //s->str, len->len_subの方がわかりやすい？
 char	*ft_substr(char const *s, unsigned int start, size_t len)

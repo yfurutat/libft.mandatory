@@ -6,12 +6,13 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:36:21 by yuske             #+#    #+#             */
-/*   Updated: 2022/11/03 11:28:18 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/23 11:15:48 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//10L
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;

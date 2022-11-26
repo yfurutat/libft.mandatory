@@ -6,7 +6,7 @@
 /*   By: yuske <yuske@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 03:24:47 by yfurutat          #+#    #+#             */
-/*   Updated: 2022/11/18 14:36:41 by yuske            ###   ########.fr       */
+/*   Updated: 2022/11/23 11:06:33 by yuske            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@
 // 	return (d_chr);
 // }
 
+//17L
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	size_t				i;
